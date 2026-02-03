@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	grettings "kssaivaibhav/Desktop/Go/Basics/Grettings"
-	package1 "kssaivaibhav/Desktop/Go/Basics/Package1"
 )
 
 func main() {
-	fmt.Println("Hello World")
-	package1.Printing()
-	grettings.Greet("Sai Vaibhav")
+	var x float64
+	fmt.Println("Enter a")
+	fmt.Scan(&x)
+	fmt.Println("Square of x is:", x*x)
 }
