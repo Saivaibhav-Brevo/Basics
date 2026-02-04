@@ -1,12 +1,10 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var x float64
-	fmt.Println("Enter a")
-	fmt.Scan(&x)
-	fmt.Println("Square of x is:", x*x)
+	name := ""
+	fmt.Println("Enter your name:")
+	fmt.Scan(&name)
+	fmt.Println("Name is:", name)
 }
