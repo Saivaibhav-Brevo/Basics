@@ -57,6 +57,11 @@ func withdraw(balance float64) float64 {
 
 	fmt.Scan(&amount)
 
+	if amount > balance {
+		fmt.Println("Insufficient balance!")
+		return balance
+	}
+
 	balance -= amount
 
 	return balance
