@@ -11,6 +11,8 @@ func main() {
 	var choice int
 
 	for choice != 4 {
+
+		fmt.Println("--------------------------------")
 		fmt.Println("Enter you choice:")
 
 		fmt.Println(`1. Deposit 2. WWithdraw 3. Check Balance 4. Exit `)
@@ -19,6 +21,8 @@ func main() {
 
 		fmt.Println("Your selected choice is:", choice)
 
+		fmt.Println("--------------------------------")
+
 		if choice == 1 {
 			balance = deposit(balance)
 		} else if choice == 2 {
@@ -26,14 +30,14 @@ func main() {
 		} else if choice == 3 {
 			checkBalance(balance)
 		} else {
-			fmt.Println("Thank you for using our services!")
+			break
 		}
 	}
 
 }
 
 func deposit(balance float64) float64 {
-	fmt.Println("Deposit function called")
+
 	var amount float64
 
 	fmt.Println("Enter amount to be deposited")
@@ -46,7 +50,7 @@ func deposit(balance float64) float64 {
 }
 
 func withdraw(balance float64) float64 {
-	fmt.Println("Deposit function called")
+
 	var amount float64
 
 	fmt.Println("Enter amount to be withdrawn")
