@@ -23,14 +23,17 @@ func main() {
 
 		fmt.Println("--------------------------------")
 
-		if choice == 1 {
+		switch choice {
+		case 1:
 			balance = deposit(balance)
-		} else if choice == 2 {
+		case 2:
 			balance = withdraw(balance)
-		} else if choice == 3 {
+		case 3:
 			checkBalance(balance)
-		} else {
-			break
+		case 4:
+			return
+		default:
+			return
 		}
 	}
 
