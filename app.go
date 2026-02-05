@@ -16,5 +16,9 @@ func main() {
 
 	si := (principal * rate * time) / 100
 
-	fmt.Printf("Simple Interests is : %f\n", si)
+	fmt.Printf("Simple Interests is : %.1f\n", si)
+
+	fmt.Printf("Simple Interests is : %.0f\n", si)
+
+	fmt.Printf("Simple Interests is : %.3f\n", si)
 }
