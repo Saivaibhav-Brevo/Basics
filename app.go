@@ -12,4 +12,14 @@ func main() {
 	var choice int
 	fmt.Scan(&choice)
 
+	fmt.Println("Your selected choice is:", choice)
+
+	if choice == 1 {
+		deposit()
+	}
+
+}
+
+func deposit() {
+	fmt.Println("Deposit function called")
 }
