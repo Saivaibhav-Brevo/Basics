@@ -8,25 +8,26 @@ func main() {
 
 	fmt.Println("Hello Welcome to Bank!")
 
-	fmt.Println("Enter you choice:")
-
-	fmt.Println(`1. Deposit 2. WWithdraw 3. Check Balance 4. Exit `)
-
 	var choice int
-	fmt.Scan(&choice)
 
-	fmt.Println("Your selected choice is:", choice)
+	for choice != 4 {
+		fmt.Println("Enter you choice:")
 
-	if choice == 1 {
-		balance = deposit(balance)
-		fmt.Println("Your current balance is:", balance)
-	} else if choice == 2 {
-		balance = withdraw(balance)
-		fmt.Println("Your current balance is:", balance)
-	} else if choice == 3 {
-		checkBalance(balance)
-	} else {
-		fmt.Println("Thank you for using our services!")
+		fmt.Println(`1. Deposit 2. WWithdraw 3. Check Balance 4. Exit `)
+
+		fmt.Scan(&choice)
+
+		fmt.Println("Your selected choice is:", choice)
+
+		if choice == 1 {
+			balance = deposit(balance)
+		} else if choice == 2 {
+			balance = withdraw(balance)
+		} else if choice == 3 {
+			checkBalance(balance)
+		} else {
+			fmt.Println("Thank you for using our services!")
+		}
 	}
 
 }
