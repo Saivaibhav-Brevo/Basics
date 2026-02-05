@@ -18,9 +18,11 @@ func main() {
 	fmt.Println("Your selected choice is:", choice)
 
 	if choice == 1 {
-		balance := deposit(balance)
+		balance = deposit(balance)
+		fmt.Println("Your current balance is:", balance)
 	} else if choice == 2 {
-		balance := withdraw(balance)
+		balance = withdraw(balance)
+		fmt.Println("Your current balance is:", balance)
 	} else if choice == 3 {
 		checkBalance(balance)
 	} else {
