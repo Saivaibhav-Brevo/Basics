@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 
@@ -72,4 +75,13 @@ func withdraw(balance float64) float64 {
 
 func checkBalance(balance float64) {
 	fmt.Println("Your current balance is:", balance)
+	writeBalanceToFile(balance)
+}
+
+func writeBalanceToFile(balance float64) {
+
+	balanceStr := fmt.Sprintf("Current Balance: %.2f\n", balance)
+
+	os.WriteFile("hello.txt", []byte(balanceStr), 0644)
+
 }
