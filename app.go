@@ -3,22 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var principal float64
-	var rate float64
-	var time float64
+	fmt.Println("Hello Welcome to Bank!")
 
-	fmt.Println("Enter Principal amount:")
-	fmt.Scan(&principal)
-	fmt.Println("Enter Rate of Interest:")
-	fmt.Scan(&rate)
-	fmt.Println("Enter Time in years:")
-	fmt.Scan(&time)
+	fmt.Println("Enter you choice:")
 
-	si := (principal * rate * time) / 100
+	fmt.Println(`1. Deposit 2. WWithdraw 3. Check Balance 4. Exit `)
 
-	fmt.Printf("Simple Interests is : %.1f\n", si)
+	var choice int
+	fmt.Scan(&choice)
 
-	fmt.Printf("Simple Interests is : %.0f\n", si)
-
-	fmt.Printf("Simple Interests is : %.3f\n", si)
 }
