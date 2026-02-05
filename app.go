@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	name := ""
-	fmt.Println("Enter your name:")
-	fmt.Scan(&name)
-	fmt.Println("Name is:", name)
+	var a int
+	var b int
+	fmt.Print("Enter 2 variables")
+	fmt.Scan(&a, &b)
+	fmt.Printf("The var are %d and %d\n", a, b)
 }
