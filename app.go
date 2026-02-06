@@ -15,15 +15,31 @@ func (emp *employee) output() {
 	fmt.Println("employee salary:", emp.salary)
 }
 
+func (emp *employee) input() {
+	fmt.Println("Enter employee details: ")
+	fmt.Print("Name: ")
+	fmt.Scanln(&emp.name)
+
+	fmt.Print("Age: ")
+	fmt.Scanln(&emp.age)
+
+	fmt.Print("Salary: ")
+	fmt.Scanln(&emp.salary)
+}
+
 func main() {
-	emp1 := employee{
-		name:   "Vaibhav",
-		age:    22,
-		salary: 50000.0,
-	}
+	// emp1 := employee{
+	// 	name:   "Vaibhav",
+	// 	age:    22,
+	// 	salary: 50000.0,
+	// }
+
+	var emp1 employee
+
+	emp1.input()
 	fmt.Println("employee details:", emp1)
 
-	showDetails(&emp1)
+	// showDetails(&emp1)
 	emp1.output()
 }
 
