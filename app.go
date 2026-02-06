@@ -23,8 +23,10 @@ func main() {
 	slice1 := temp2[1:3]
 	slice2 := temp2[0:4]
 	slice3 := temp2[0:]
+	slice4 := temp2[:3]
 
-	fmt.Println("slice is ", slice1)
-	fmt.Println("slice is ", slice2)
-	fmt.Println("slice is ", slice3)
+	fmt.Println("slice1 is ", slice1)
+	fmt.Println("slice2 is ", slice2)
+	fmt.Println("slice3 is ", slice3)
+	fmt.Println("slice4 is ", slice4)
 }
