@@ -7,7 +7,13 @@ func main() {
 
 	var temp [5]int
 
-	fmt.Println("Enter the size of the array: ", arr)
-	fmt.Println("Enter the size of the array: ", temp)
+	var str [2]string
+
+	str[0] = "sai"
+	str[1] = "vaibhav"
+
+	fmt.Println("arr is ", str)
+	fmt.Println("arr is ", arr)
+	fmt.Println("arr is ", temp)
 
 }
