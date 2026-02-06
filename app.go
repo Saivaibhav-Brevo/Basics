@@ -8,6 +8,13 @@ type employee struct {
 	salary float64
 }
 
+// reciever type
+func (emp *employee) output() {
+	fmt.Println("employee name:", emp.name)
+	fmt.Println("employee age:", emp.age)
+	fmt.Println("employee salary:", emp.salary)
+}
+
 func main() {
 	emp1 := employee{
 		name:   "Vaibhav",
@@ -17,6 +24,7 @@ func main() {
 	fmt.Println("employee details:", emp1)
 
 	showDetails(&emp1)
+	emp1.output()
 }
 
 func showDetails(emp *employee) {
