@@ -2,21 +2,17 @@ package main
 
 import "fmt"
 
-type person struct {
-	firstName string
-	lastName  string
-	age       int
+type employee struct {
+	name   string
+	age    int
+	salary float64
 }
 
 func main() {
-
-	var p1 person
-	p1 = person{
-		firstName: "Vaibhav",
-		age:       12,
-		lastName:  "Kumar",
+	emp1 := employee{
+		name:   "Vaibhav",
+		age:    22,
+		salary: 50000.0,
 	}
-
-	fmt.Println(p1.firstName)
-
+	fmt.Println("employee details:", emp1)
 }
