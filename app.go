@@ -15,4 +15,11 @@ func main() {
 		salary: 50000.0,
 	}
 	fmt.Println("employee details:", emp1)
+	showDetails(emp1)
+}
+
+func showDetails(emp employee) {
+	fmt.Println("employee name:", emp.name)
+	fmt.Println("employee age:", emp.age)
+	fmt.Println("employee salary:", emp.salary)
 }
