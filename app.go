@@ -16,4 +16,15 @@ func main() {
 	fmt.Println("arr is ", arr)
 	fmt.Println("arr is ", temp)
 
+	//slices
+
+	temp2 := []float64{2.4, 5.6, 7.3, 8.9}
+
+	slice1 := temp2[1:3]
+	slice2 := temp2[0:4]
+	slice3 := temp2[0:]
+
+	fmt.Println("slice is ", slice1)
+	fmt.Println("slice is ", slice2)
+	fmt.Println("slice is ", slice3)
 }
