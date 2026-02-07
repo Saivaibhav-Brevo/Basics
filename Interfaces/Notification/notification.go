@@ -31,7 +31,7 @@ func main() {
 	}
 
 	for _, v := range notifiers {
-		v.Send("Hello!")
+		v.Send("no!")
 	}
 
 }
