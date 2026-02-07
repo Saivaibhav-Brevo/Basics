@@ -1,24 +1,10 @@
 package main
 
-import "fmt"
-
 func main() {
 
-	var arr [5]int
+	arr := []int{1, 2, 34, 56}
 
-	fmt.Println("Enter array elements:")
-
-	for i := 0; i < 5; i++ {
-		fmt.Scan(&arr[i])
+	for i, v := range arr {
+		println("Index:", i, "Value:", v)
 	}
-
-	fmt.Println("arr is ", arr)
-
-	temp := arr[0]
-	for i := 1; i < 5; i++ {
-		if temp < arr[i] {
-			temp = arr[i]
-		}
-	}
-	fmt.Println("Largest element is ", temp)
 }
