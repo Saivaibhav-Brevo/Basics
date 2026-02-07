@@ -9,9 +9,11 @@ type Person struct {
 	id int
 }
 
+var customError = errors.New("This is a custom error")
+
 func (p *Person) assignement() error {
 	fmt.Println("Reciever type Function calleed")
-	return errors.New("This is an error")
+	return customError
 }
 
 func compute(p *Person) error {
@@ -25,7 +27,10 @@ func main() {
 	err := compute(&p1)
 
 	if err != nil {
-		fmt.Println("Error:", err)
+		if errors.Is(err, customError) {
+			err = fmt.Errorf("failed to load user: %w", err)
+			fmt.Println(err)
+		}
 	}
 
 }
