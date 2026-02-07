@@ -1,20 +1,31 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type Person struct {
 	id int
 }
 
 func (p *Person) assignement() error {
-	fmt.Println("Function calleed")
-	return nil
+	fmt.Println("Reciever type Function calleed")
+	return errors.New("This is an error")
+}
+
+func compute(p *Person) error {
+	errorFunc := p.assignement()
+	return errorFunc
 }
 
 func main() {
 	p1 := Person{}
-	err := p1.assignement()
+
+	err := compute(&p1)
+
 	if err != nil {
 		fmt.Println("Error:", err)
 	}
+
 }
