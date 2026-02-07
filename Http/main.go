@@ -7,7 +7,17 @@ type server struct {
 }
 
 func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello World"))
+	switch r.URL.Path {
+	case "/":
+		w.Write([]byte("Hello World"))
+
+	case "/about":
+		w.Write([]byte("This is the about page"))
+
+	default:
+		w.Write([]byte("404 Not Found"))
+	}
+
 }
 
 func main() {
