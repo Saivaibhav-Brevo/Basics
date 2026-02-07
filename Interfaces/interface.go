@@ -19,20 +19,18 @@ type Square struct {
 	side float64
 }
 
-func (r *Rectangle) Area(w, h float64) (float64, error) {
-	return (w * h), nil
+func (r *Rectangle) Area() float64 {
+	return r.width * r.height
 }
 
-func (r *Square) Area(s float64) (float64, error) {
-	return math.Pow(s, 2), nil
+func (r *Square) Area() float64 {
+	return math.Pow(r.side, 2)
 }
 
 func main() {
 
-	rect := Rectangle{}
+	rect := Rectangle{width: 10.5, height: 11.5}
 
-	res, _ := rect.Area(10.5, 11.5)
-
-	fmt.Println("Area of Rectangle is: ", res)
+	fmt.Println("Area of Rectangle is: ", rect.Area())
 
 }
