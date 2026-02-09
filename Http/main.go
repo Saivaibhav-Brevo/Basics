@@ -28,8 +28,8 @@ func (a *api) getUserHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Get User"))
 }
 
-func (a *api) listUsersHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("List Users"))
+func (a *api) createUserHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Created User"))
 }
 
 func main() {
@@ -41,8 +41,16 @@ func main() {
 	//Initiialise Mux
 	mux := http.NewServeMux()
 
-	//Register Handlers
-	mux.HandleFunc("/user/get", api.getUserHandler)
-	mux.HandleFunc("/user/list", api.listUsersHandler)
+	srv := &http.Server{
+		Addr:    api.address,
+		Handler: mux,
+	}
 
+	//Register Handlers
+	mux.HandleFunc("GET /user/get", api.getUserHandler)
+	mux.HandleFunc("POST /user/create", api.createUserHandler)
+
+	if err := srv.ListenAndServe(); err != nil {
+		panic(err)
+	}
 }
